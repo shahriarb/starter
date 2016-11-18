@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"github.com/cloud66/starter/common"
+	"github.com/shahriarb/starter/common"
 )
 
 type AnalyzerBase struct {

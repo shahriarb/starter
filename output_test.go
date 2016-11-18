@@ -5,7 +5,7 @@ import (
 	"os"
 	"regexp"
 	//"strings"
-	"github.com/cloud66/starter/common"
+	"github.com/shahriarb/starter/common"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"os/exec"
@@ -57,7 +57,7 @@ func cleanupGeneratedFiles(projectFixture string) {
 // change) to 'master' in the generated file.
 func convertServiceYaml(generated []byte) []byte {
 	generated = regexp.MustCompile(`git_branch: .*`).ReplaceAll(generated, []byte("git_branch: master"))
-	generated = regexp.MustCompile(`git_url: .*`).ReplaceAll(generated, []byte("git_url: git@github.com:cloud66/starter.git"))
+	generated = regexp.MustCompile(`git_url: .*`).ReplaceAll(generated, []byte("git_url: git@github.com:shahriarb/starter.git"))
 	return generated
 }
 

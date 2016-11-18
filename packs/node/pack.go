@@ -1,7 +1,7 @@
 package node
 
-import "github.com/cloud66/starter/packs"
-import "github.com/cloud66/starter/common"
+import "github.com/shahriarb/starter/packs"
+import "github.com/shahriarb/starter/common"
 
 type Pack struct {
 	packs.PackBase

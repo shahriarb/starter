@@ -4,23 +4,25 @@ import (
 	"archive/zip"
 	"bytes"
 	"fmt"
-	"github.com/ant0ine/go-json-rest/rest"
-	"github.com/cloud66/starter/common"
-	"github.com/cloud66/starter/packs"
-	"github.com/cloud66/starter/packs/node"
-	"github.com/cloud66/starter/packs/php"
-	"github.com/cloud66/starter/packs/ruby"
-	"github.com/heroku/docker-registry-client/registry"
-	"github.com/satori/go.uuid"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"path/filepath"
-	"strings"
-	"text/template"
 	"regexp"
 	"strconv"
+	"strings"
+	"text/template"
+
+	"github.com/ant0ine/go-json-rest/rest"
+	"github.com/golang/glog"
+	"github.com/heroku/docker-registry-client/registry"
+	"github.com/satori/go.uuid"
+	"github.com/shahriarb/starter/common"
+	"github.com/shahriarb/starter/packs"
+	"github.com/shahriarb/starter/packs/node"
+	"github.com/shahriarb/starter/packs/php"
+	"github.com/shahriarb/starter/packs/ruby"
 )
 
 // API holds starter API
@@ -57,7 +59,6 @@ func (a *API) Error(w rest.ResponseWriter, error string, error_code int, http_co
 		panic(err)
 	}
 }
-
 
 // StartAPI starts the API listeners
 func (a *API) StartAPI() error {
@@ -136,17 +137,27 @@ func (a *API) version(w rest.ResponseWriter, r *rest.Request) {
 }
 
 func (a *API) dockerfiles(w rest.ResponseWriter, r *rest.Request) {
+	glog.Info("1")
 	packs := []packs.Pack{new(ruby.Pack), new(node.Pack), new(php.Pack)}
+	glog.Info("2")
 	dockerfiles := []Dockerfile{}
+	glog.Info("3")
 	for _, p := range packs {
+		glog.Info("4")
 		dockerfile := Dockerfile{}
+		glog.Info("5")
 		dockerfile.Language = p.Name()
+		glog.Info("6")
 
 		//parse base template
+		glog.Info("7")
 		templateName := fmt.Sprintf("%s.dockerfile.template", p.Name())
+		glog.Info("8")
 		tmpl, _ := template.ParseFiles(filepath.Join(config.template_path, templateName))
+		glog.Info("9")
 
 		var doc bytes.Buffer
+		glog.Info("10")
 
 		version := struct {
 			Version  string
@@ -155,17 +166,26 @@ func (a *API) dockerfiles(w rest.ResponseWriter, r *rest.Request) {
 			Version:  "latest",
 			Packages: common.NewLister(),
 		}
+		glog.Info("11")
 
 		err := tmpl.Execute(&doc, version)
+		glog.Info("12")
 		if err != nil {
+			glog.Info("13")
 			a.Error(w, err.Error(), 1, http.StatusInternalServerError)
+			glog.Info("14")
 			return
 		}
+		glog.Info("15")
 		dockerfile.Base = doc.String()
+		glog.Info("16")
 
 		dockerfiles = append(dockerfiles, dockerfile)
+		glog.Info("17")
 	}
+	glog.Info("18")
 	w.WriteJson(dockerfiles)
+	glog.Info("19")
 }
 
 func (a *API) upload(w rest.ResponseWriter, r *rest.Request) {

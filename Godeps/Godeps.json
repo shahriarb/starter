@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/cloud66/starter",
+	"ImportPath": "github.com/shahriarb/starter",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v74",
 	"Packages": [

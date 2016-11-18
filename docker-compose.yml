@@ -2,6 +2,6 @@ starter:
   dockerfile: Dockerfile
   build: .
   volumes:
-    - ${PWD}:/usr/local/go/src/github.com/cloud66/starter
+    - ${PWD}:/usr/local/go/src/github.com/shahriarb/starter
   ports:
     - 9091:9090

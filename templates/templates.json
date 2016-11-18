@@ -1,15 +1,15 @@
 {
   "version" : "1.0.2",
   "dockerfiles" : [
-    { "name": "node.dockerfile.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/node.dockerfile.template"},
-    { "name": "python.dockerfile.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/python.dockerfile.template"},
-    { "name": "ruby.dockerfile.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/ruby.dockerfile.template"}
-    { "name": "php.dockerfile.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/php.dockerfile.template"}
+    { "name": "node.dockerfile.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/node.dockerfile.template"},
+    { "name": "python.dockerfile.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/python.dockerfile.template"},
+    { "name": "ruby.dockerfile.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/ruby.dockerfile.template"}
+    { "name": "php.dockerfile.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/php.dockerfile.template"}
   ],
   "service-ymls" : [
-    { "name": "service.yml.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/service.yml.template"}
+    { "name": "service.yml.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/service.yml.template"}
   ],
   "docker-compose-ymls" : [
-    { "name": "docker-compose.yml.template", "url" : "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/docker-compose.yml.template"}
+    { "name": "docker-compose.yml.template", "url" : "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/docker-compose.yml.template"}
   ]
 }

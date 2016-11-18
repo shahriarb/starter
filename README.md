@@ -1,6 +1,6 @@
 # Cloud 66 Starter
 
-![Codeship Status for cloud66/starter](https://codeship.com/projects/81c5dde0-e914-0133-c219-4eaa3299b296/status)
+![Codeship Status for shahriarb/starter](https://codeship.com/projects/81c5dde0-e914-0133-c219-4eaa3299b296/status)
 
 Cloud 66 starter is an open-source command line tool to generate a `Dockerfile` and a `service.yml` file from arbitrary source code. The `service.yml` file is a Cloud 66 service definition file which is used to define the service configurations on a stack.
 
@@ -18,8 +18,8 @@ To make sure you a have isolated development environment for contribution. You c
 
 Building starter inside a docker container:
 
-<kbd>root@xx:/usr/local/go/src/github.com/cloud66/starter# go build</kbd>
+<kbd>root@xx:/usr/local/go/src/github.com/shahriarb/starter# go build</kbd>
 
 Running the tests:
 
-<kbd>root@xx:/usr/local/go/src/github.com/cloud66/starter# go test</kbd>
+<kbd>root@xx:/usr/local/go/src/github.com/shahriarb/starter# go test</kbd>

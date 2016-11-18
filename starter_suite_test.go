@@ -1,7 +1,7 @@
 package main_test
 
 import (
-	"github.com/cloud66/starter/common"
+	"github.com/shahriarb/starter/common"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"os/exec"

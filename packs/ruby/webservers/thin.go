@@ -1,6 +1,6 @@
 package webservers
 
-import "github.com/cloud66/starter/packs"
+import "github.com/shahriarb/starter/packs"
 
 type Thin struct {
 	packs.WebServerBase

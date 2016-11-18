@@ -14,7 +14,7 @@ import (
 	"regexp"
 
 	"github.com/bugsnag/bugsnag-go"
-	"github.com/cloud66/starter/common"
+	"github.com/shahriarb/starter/common"
 	"github.com/heroku/docker-registry-client/registry"
 	"github.com/mitchellh/go-homedir"
 )
@@ -76,7 +76,7 @@ var (
 )
 
 const (
-	templatePath = "https://raw.githubusercontent.com/cloud66/starter/{{.branch}}/templates/templates.json"
+	templatePath = "https://raw.githubusercontent.com/shahriarb/starter/{{.branch}}/templates/templates.json"
 )
 
 func init() {

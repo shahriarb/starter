@@ -3,7 +3,7 @@
 services:
 
   web:
-    git_url: git@github.com:cloud66/starter.git
+    git_url: git@github.com:shahriarb/starter.git
     git_branch: master
     command: node lib/index.js
     build_root: test/node/express_mongodb_procfile/src/
@@ -15,7 +15,7 @@ services:
       PORT: 3000
 
   background:
-    git_url: git@github.com:cloud66/starter.git
+    git_url: git@github.com:shahriarb/starter.git
     git_branch: master
     command: node lib/background.js
     build_root: test/node/express_mongodb_procfile/src/

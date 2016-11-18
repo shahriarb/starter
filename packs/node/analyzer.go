@@ -6,8 +6,8 @@ import (
 	"strings"
 	"strconv"
 
-	"github.com/cloud66/starter/common"
-	"github.com/cloud66/starter/packs"
+	"github.com/shahriarb/starter/common"
+	"github.com/shahriarb/starter/packs"
 	"github.com/blang/semver"
 )
 
